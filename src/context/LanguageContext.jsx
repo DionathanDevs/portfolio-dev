@@ -34,8 +34,8 @@ export const getExperienceData = (lang) => [
         company: "blueEz",
         period: lang === 'pt' ? "fev de 2026 — Presente (3 meses)" : "Feb 2026 — Present (3 mos)",
         description: lang === 'pt'
-            ? "Atuação direta na construção e entrega de novas funcionalidades com Node.js e Java no back-end. Desenvolvimento front-end com foco em componentização usando JavaScript, HTML, CSS, React e Bootstrap. Realização de integrações com grandes ERPs (SAP, TOTVS RM). Manutenção, resolução de chamados e manipulação de dados em MySQL, MongoDB e Redis, e controle de filas assíncronas com BullMQ."
-            : "Direct involvement in building and delivering new features with Node.js and Java. Front-end development using JavaScript, HTML, CSS, React, and Bootstrap. Responsible for integrating with major ERPs (SAP, TOTVS RM). Maintenance, bug resolution, manipulation of MySQL, MongoDB, and Redis databases, and queue control via BullMQ.",
+            ? "Atuação direta na construção e entrega de novas funcionalidades com Node.js e Java no back-end. Desenvolvimento front-end com foco em componentização usando JavaScript, HTML, CSS, React e Bootstrap. Realização de integrações com grandes ERPs (SAP, Piramide). Manutenção, resolução de chamados e manipulação de dados em MySQL, MongoDB e Redis, e controle de filas assíncronas com BullMQ."
+            : "Direct involvement in building and delivering new features with Node.js and Java. Front-end development using JavaScript, HTML, CSS, React, and Bootstrap. Responsible for integrating with major ERPs (SAP, Piramide). Maintenance, bug resolution, manipulation of MySQL, MongoDB, and Redis databases, and queue control via BullMQ.",
     },
     {
         id: 2,
