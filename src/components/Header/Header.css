@@ -1,0 +1,117 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.header:hover,
+.header:focus-within {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.logo-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--foreground);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 400;
+    color: var(--foreground-muted);
+    font-size: 0.9rem;
+    transition: color var(--trans-speed) ease;
+}
+
+.nav-links a:hover {
+    color: var(--foreground);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.social-links a {
+    color: var(--foreground-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--trans-speed) ease;
+}
+
+.social-links a:hover {
+    color: var(--foreground);
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--foreground-muted);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    transition: color var(--trans-speed) ease;
+}
+
+.lang-toggle:hover {
+    color: var(--foreground);
+}
+
+.lang-label {
+    font-weight: 500;
+}
+
+.social-divider {
+    width: 1px;
+    height: 20px;
+    background-color: var(--border-color);
+    margin: 0 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}

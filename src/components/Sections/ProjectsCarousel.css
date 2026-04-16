@@ -1,0 +1,159 @@
+.projects-section {
+    background-color: var(--bg-elevated);
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.carousel-btn {
+    background-color: transparent;
+    color: var(--foreground-muted);
+    border: 1px solid var(--border-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    /* Squarish for resend vibe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--trans-speed) ease;
+}
+
+.carousel-btn:hover {
+    background-color: var(--border-color);
+    color: var(--foreground);
+}
+
+/* Embla Carousel Styles */
+.embla {
+    overflow: visible;
+    padding: 1rem 0 2rem 0;
+}
+
+.embla__container {
+    display: flex;
+    gap: 2rem;
+}
+
+.embla__slide {
+    flex: 0 0 calc(100%);
+    min-width: 0;
+}
+
+@media (min-width: 768px) {
+    .embla__slide {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+/* Project Card */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid var(--border-color);
+    transition: border-color var(--trans-speed) ease, background-color var(--trans-speed) ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    border-color: var(--border-hover);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.project-image-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: grayscale(80%) contrast(1.1);
+    /* moody big tech aesthetic */
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.03);
+    filter: grayscale(0%) contrast(1);
+}
+
+.project-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-title {
+    color: var(--foreground);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.project-desc {
+    color: var(--foreground-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    color: var(--foreground-dim);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--foreground);
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all var(--trans-speed) ease;
+}
+
+.project-card:hover .project-link {
+    opacity: 1;
+    transform: translateX(0);
+}

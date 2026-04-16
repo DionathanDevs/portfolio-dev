@@ -1,0 +1,71 @@
+.experience-section {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.experience-list {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 1rem;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.exp-meta {
+    flex-shrink: 0;
+    margin-bottom: 0.5rem;
+}
+
+.exp-period {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: var(--foreground-muted);
+    letter-spacing: -0.01em;
+}
+
+.exp-content {
+    flex: 1;
+}
+
+.exp-role {
+    font-size: 1.25rem;
+    color: var(--foreground);
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+}
+
+.exp-company {
+    font-size: 1rem;
+    color: var(--foreground-dim);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.exp-desc {
+    color: var(--foreground-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .experience-item {
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .exp-meta {
+        width: 200px;
+        margin-bottom: 0;
+    }
+}
