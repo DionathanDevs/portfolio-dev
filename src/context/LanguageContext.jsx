@@ -7,20 +7,20 @@ export const LanguageContext = createContext();
 export const translations = {
     pt: {
         nav: { about: "Sobre", stacks: "Stacks", experience: "Carreira", projects: "Projetos" },
-        hero: { badge: "Desenvolvedor Full Stack", title1: "boing.", title2: "boing.", desc: "Desenvolvedor Full Stack focado em criar e manter aplicações robustas, garantindo integrações de sistemas fluidas e excelentes experiências de usuário.", btnProjects: "Ver Projetos", btnResume: "Currículo" },
-        about: { label: "Sobre mim", title: "Desenvolvimento Full Stack moderno e robusto.", p1: "Sou um Desenvolvedor Full Stack com forte vivência em Node.js, React e JavaScript, trabalhando junto a bancos de dados como MySQL, MongoDB e Redis.", p2: "Atuo no desenvolvimento de sistemas inteiros, focando desde em integrações com ERPs de mercado até a orquestração via Docker e RabbitMQ/BullMQ, assegurando entregas sempre ágeis e estáveis.", stat1v: "Full", stat1l: "Stack", stat2v: "APIs &", stat2l: "Integrações", stat3v: "Clean", stat3l: "Code", available: "Disponível para projetos", role: "Desenvolvedor Full Stack" },
-        stacks: { label: "Habilidades", title: "Tecnologias.", desc: "A stack tecnológica onde alio meu domínio e as ferramentas adotadas para aplicações eficazes." },
-        experience: { label: "Carreira", title: "Experiência.", desc: "Minha trajetória e evolução de carreira com software." },
+        hero: { badge: "Desenvolvedor Full Stack", title1: "boing.", title2: "boing.", desc: "Desenvolvedor Full Stack com foco em Node.js, TypeScript, Angular e Java, transformando regras de negócio em soluções ponta a ponta com integrações de ERPs e desenvolvimento assistido por IA.", btnProjects: "Ver Projetos", btnResume: "Currículo" },
+        about: { label: "Sobre mim", title: "Desenvolvimento Full Stack moderno e robusto.", p1: "Sou Desenvolvedor Full Stack formado em Análise e Desenvolvimento de Sistemas pela Universidade Positivo (12/2025), com experiência em Node.js, TypeScript, Angular, JavaScript e Java, transformando regras de negócio de vários módulos em soluções funcionais.", p2: "No dia a dia, construo features ponta a ponta, integro sistemas com ERPs (SAP, TOTVS RM, TOTVS Protheus, Pirâmide), implemento filas assíncronas com BullMQ, gerencio dados em MySQL, MongoDB e Redis e utilizo IA como ferramenta central de desenvolvimento (geração, revisão e depuração de código), aliado a Docker, CI/CD e code review.", stat1v: "Full", stat1l: "Stack", stat2v: "ERPs &", stat2l: "Integrações", stat3v: "Dev + IA &", stat3l: "Clean Code", available: "Disponível para projetos", role: "Desenvolvedor Full Stack | Node.js, TypeScript & IA" },
+        stacks: { label: "Habilidades", title: "Tecnologias.", desc: "Competências técnicas, ferramentas e integrações que utilizo no dia a dia para entregar soluções completas e testáveis." },
+        experience: { label: "Carreira", title: "Experiência.", desc: "Minha trajetória profissional e formação em Análise e Desenvolvimento de Sistemas." },
         projects: { label: "Trabalhos em Destaque", title: "Projetos.", viewCase: "Ver Case" },
         footer: { desc: "Construindo software de alta performance.", rights: "Todos os direitos reservados." },
         details: { back: "Voltar ao Portfólio", code: "Ver Código", demo: "Ver Demo", about: "Sobre o Projeto", tech: "Tecnologias Usadas", timeline: "Linha do tempo", notFound: "Projeto não encontrado", return: "Voltar ao Início" }
     },
     en: {
         nav: { about: "About", stacks: "Stacks", experience: "Career", projects: "Projects" },
-        hero: { badge: "Full Stack Developer", title1: "boing.", title2: "boing.", desc: "Full Stack Developer focused on building robust applications, ensuring smooth system integrations and excellent user experiences.", btnProjects: "Explore Work", btnResume: "Resume" },
-        about: { label: "About me", title: "Modern and robust Full Stack development.", p1: "I am a Full Stack Developer with strong experience in Node.js, React, and JavaScript, along with databases such as MySQL, MongoDB, and Redis.", p2: "I work on complete system development, focusing on everything from market ERP integrations to Docker orchestration and BullMQ orchestration, always ensuring agile and stable delivery.", stat1v: "Full", stat1l: "Stack", stat2v: "APIs &", stat2l: "Integrations", stat3v: "Clean", stat3l: "Code", available: "Available for work", role: "Full Stack Developer" },
-        stacks: { label: "Capabilities", title: "Technology Stack.", desc: "The tech stack where my expertise lies for building effective applications." },
-        experience: { label: "Career", title: "Experience.", desc: "My professional journey and career evolution in software." },
+        hero: { badge: "Full Stack Developer", title1: "boing.", title2: "boing.", desc: "Full Stack Developer focused on Node.js, TypeScript, Angular, and Java, turning complex business rules into end-to-end solutions with ERP integrations and AI-assisted development.", btnProjects: "Explore Work", btnResume: "Resume" },
+        about: { label: "About me", title: "Modern and robust Full Stack development.", p1: "I am a Full Stack Developer with a degree in Systems Analysis and Development from Universidade Positivo (12/2025) and experience in Node.js, TypeScript, Angular, JavaScript, and Java, turning multi-module business rules into functional solutions.", p2: "Day to day, I build end-to-end features, integrate systems with major ERPs (SAP, TOTVS RM, TOTVS Protheus, Pirâmide), implement asynchronous queues with BullMQ, work with MySQL, MongoDB, and Redis, and leverage AI as a core development tool (code generation, review, and debugging) alongside Docker, CI/CD, and code reviews.", stat1v: "Full", stat1l: "Stack", stat2v: "ERPs &", stat2l: "Integrations", stat3v: "AI Dev &", stat3l: "Clean Code", available: "Available for work", role: "Full Stack Developer | Node.js, TypeScript & AI" },
+        stacks: { label: "Capabilities", title: "Technology Stack.", desc: "Technical skills, tools, and integrations I use daily to deliver complete and testable solutions." },
+        experience: { label: "Career", title: "Experience.", desc: "My professional journey and background in Systems Analysis and Development." },
         projects: { label: "Selected Work", title: "Projects.", viewCase: "View Case" },
         footer: { desc: "Building high-performance software.", rights: "All rights reserved." },
         details: { back: "Back to Portfolio", code: "View Code", demo: "Live Demo", about: "About the Project", tech: "Technologies Used", timeline: "Timeline", notFound: "Project not found", return: "Return Home" }
@@ -31,38 +31,38 @@ export const getExperienceData = (lang) => [
     {
         id: 1,
         role: lang === 'pt' ? "Desenvolvedor Full Stack" : "Full Stack Developer",
-        company: "blueEz",
-        period: lang === 'pt' ? "fev de 2026 — Presente (3 meses)" : "Feb 2026 — Present (3 mos)",
+        company: "blueEz (Monditech)",
+        period: lang === 'pt' ? "fev. 2026 — atual" : "Feb 2026 — Present",
         description: lang === 'pt'
-            ? "Atuação direta na construção e entrega de novas funcionalidades com Node.js e Java no back-end. Desenvolvimento front-end com foco em componentização usando JavaScript, HTML, CSS, React e Bootstrap. Realização de integrações com grandes ERPs (SAP, Piramide). Manutenção, resolução de chamados e manipulação de dados em MySQL, MongoDB e Redis, e controle de filas assíncronas com BullMQ."
-            : "Direct involvement in building and delivering new features with Node.js and Java. Front-end development using JavaScript, HTML, CSS, React, and Bootstrap. Responsible for integrating with major ERPs (SAP, Piramide). Maintenance, bug resolution, manipulation of MySQL, MongoDB, and Redis databases, and queue control via BullMQ.",
+            ? "Conversão de regras de negócio de diversos módulos em features ponta a ponta com Node.js e Java no back-end e TypeScript, Angular e JavaScript componentizado no front-end (HTML, CSS, Bootstrap, jQuery), escrevendo código pensado para ser testável. Revisão contínua do workflow de desenvolvimento com apoio de IA (geração, revisão e depuração de código). Construção e manutenção de integrações com ERPs (SAP, TOTVS RM, TOTVS Protheus e Pirâmide) e filas assíncronas com BullMQ. Modelagem e consulta de dados em MySQL, MongoDB e Redis, padronização de ambientes com Docker Compose, validação de APIs com Postman, CI/CD (Jenkins e GitHub Actions), deploy com Docker em VMs, code review e análise/resolução de chamados técnicos."
+            : "Translating multi-module business rules into end-to-end features using Node.js and Java on the back-end and TypeScript, Angular, and componentized JavaScript on the front-end (HTML, CSS, Bootstrap, jQuery) with testable code design. Enhancing delivery speed by refining the development workflow with AI assistance (code generation, review, and debugging). Building and maintaining integrations with enterprise ERPs (SAP, TOTVS RM, TOTVS Protheus, and Pirâmide) and asynchronous queues with BullMQ. Modeling and querying data in MySQL, MongoDB, and Redis, standardizing environments with Docker Compose, validating APIs with Postman, working with CI/CD (Jenkins, GitHub Actions), Docker deployments on VMs, code reviews, and technical incident resolution.",
     },
     {
         id: 2,
-        role: lang === 'pt' ? "Desenvolvedor Front-End, Suporte & QA" : "Front-End Developer, Support & QA",
+        role: lang === 'pt' ? "Suporte Técnico Júnior" : "Junior Technical Support",
         company: "Monditech",
-        period: lang === 'pt' ? "mar de 2025 — Presente (1 a 2 m)" : "Mar 2025 — Present (1 yr 2 mos)",
+        period: lang === 'pt' ? "ago. 2025 — fev. 2026" : "Aug 2025 — Feb 2026",
         description: lang === 'pt'
-            ? "Iniciei como Estagiário de Quality Assurance, fui promovido a Suporte Técnico Júnior lidando com atendimento ao cliente e Azure DevOps, e posteriormente alcancei a vaga de Desenvolvedor Front-End."
-            : "I started as a Quality Assurance Intern, was promoted to Junior Technical Support handling customer service and Azure DevOps, and subsequently became a Front-End Developer.",
+            ? "Atendimento e diagnóstico de chamados técnicos, replicando cenários de erro e escalando correções junto ao time de desenvolvimento. Essa vivência direta com o sistema em produção impulsionou a transição para a área de desenvolvimento."
+            : "Handled and diagnosed technical tickets, reproducing error scenarios and escalating fixes to the engineering team. This hands-on experience with the production system led directly to transitioning into software development.",
     },
     {
         id: 3,
-        role: lang === 'pt' ? "Aprendiz" : "Apprentice",
-        company: "CGN Brasil Energia",
-        period: lang === 'pt' ? "jun de 2023 — fev de 2025 (1 a 9 m)" : "Jun 2023 — Feb 2025 (1 yr 9 mos)",
+        role: lang === 'pt' ? "Estagiário de QA" : "QA Intern",
+        company: "Monditech",
+        period: lang === 'pt' ? "mar. 2025 — jul. 2025" : "Mar 2025 — Jul 2025",
         description: lang === 'pt'
-            ? "Criação de um sistema web interno focado em edição e exibição de registros usando PHP, JavaScript, MySQL, HTML e CSS. Também atuei no controle de impostos e despesas por meio do SAP Business One e com avaliação rigorosa da documentação de parceiros e fornecedores."
-            : "Developed an internal web platform for editing and viewing records employing PHP, JavaScript, MySQL, HTML, and CSS. Handled general expense launches via SAP Business One and meticulously evaluated supplier documentation.",
+            ? "Testes e validação de funcionalidades do sistema, acompanhando demandas e defeitos no Azure DevOps e prestando atendimento a clientes."
+            : "Tested and validated system features, tracking tasks and defects in Azure DevOps while assisting customers.",
     },
     {
         id: 4,
-        role: lang === 'pt' ? "Estagiário QA" : "QA Intern",
-        company: "Up&Help",
-        period: lang === 'pt' ? "dez de 2022 — jun de 2023 (7 meses)" : "Dec 2022 — Jun 2023 (7 mos)",
+        role: lang === 'pt' ? "Aprendiz" : "Apprentice",
+        company: "CGN Brasil Energia",
+        period: lang === 'pt' ? "jun. 2023 — fev. 2025" : "Jun 2023 — Feb 2025",
         description: lang === 'pt'
-            ? "Focado na garantia da qualidade contínua. Realização de testes detalhados e asseguramento de qualidades técnicas variadas aos clientes em dispositivos pontuais."
-            : "Focused on continuous quality assurance. Conducted rigorous and detailed functional quality tests, assuring multiple layers of technical validation on targeted enterprise hardware/systems.",
+            ? "Criação de um sistema web interno para cadastro, visualização em tabela e edição de equipamentos, utilizando PHP, JavaScript, MySQL, HTML e CSS."
+            : "Created an internal web system for registering, viewing in tables, and editing equipment using PHP, JavaScript, MySQL, HTML, and CSS.",
     }
 ];
 
@@ -73,7 +73,7 @@ export const getProjectsData = (lang) => [
         description: lang === 'pt' ? "Aplicação full-stack para salvar e executar scripts, trechos de código e links, com interface inspirada em terminal." : "A full-stack application for saving and running scripts, code snippets and links, with a terminal-themed UI.",
         image: scriptProjectImg,
         tags: ["React", "Node.js", "SQLite"],
-        githubUrl: "https://github.com/boing/scriptvault",
+        githubUrl: "https://github.com/DionathanDevs/scriptvault",
         demoUrl: "#",
         longDescription: lang === 'pt'
             ? "ScriptVault App é uma solução abrangente para desenvolvedores gerenciarem e executarem scripts, trechos de código, links importantes e documentação em uma interface altamente customizável com o tema Dark/Terminal. O foco principal é o armazenamento e execução de scripts shell e de automação. Possui um backend Node.js robusto usando módulos ESM e banco de dados SQLite."
@@ -85,7 +85,7 @@ export const getProjectsData = (lang) => [
         description: lang === 'pt' ? "Um rastreador pessoal de aprendizado focado em guardar reflexões diárias limpas." : "A clean personal learning tracker showcasing daily insights and reflections.",
         image: tilProjectImg,
         tags: ["React", "Context API"],
-        githubUrl: "https://github.com/boing/til",
+        githubUrl: "https://github.com/DionathanDevs/til",
         demoUrl: "#",
         longDescription: lang === 'pt'
             ? "A plataforma 'Today I Learned' (Hoje eu aprendi) permite que os usuários documentem suas reflexões diárias. Inclui funcionalidade para categorização, análise da abordagem ('o que eu faria diferente') e view de leitura limpa modular."
