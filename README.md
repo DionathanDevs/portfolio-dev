@@ -4,7 +4,7 @@ Portfólio pessoal de **Dionathan Boing**, Desenvolvedor Full Stack focado em **
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - **Internacionalização (PT-BR / EN-US)**: Alternância dinâmica de idioma com detecção automática da preferência do navegador e persistência em `localStorage`.
 - **Seções Completas**:
@@ -14,11 +14,11 @@ Portfólio pessoal de **Dionathan Boing**, Desenvolvedor Full Stack focado em **
   - **Carreira (Experiência)**: Linha do tempo profissional detalhada.
   - **Projetos**: Carrossel interativo com página de detalhes dedicada para cada projeto (`/project/:id`).
 - **SEO & Dados Estruturados**: Meta tags completas (Open Graph, Twitter Cards) e schema JSON-LD (`Person`) para mecanismos de busca e IAs.
-- ** Cabeçalhos de Segurança**: Configuração de `Content-Security-Policy`, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy` e `Permissions-Policy`.
+- **Cabeçalhos de Segurança**: Configuração de `Content-Security-Policy`, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy` e `Permissions-Policy`.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Front-end**: [React 19](https://react.dev/), [Vite 8](https://vite.dev/), [React Router 7](https://reactrouter.com/)
 - **Animações & UI**: [Framer Motion](https://www.framer.com/motion/), [Embla Carousel](https://www.embla-carousel.com/), [Lucide React](https://lucide.dev/), CSS moderno com variáveis
@@ -29,7 +29,7 @@ Portfólio pessoal de **Dionathan Boing**, Desenvolvedor Full Stack focado em **
 
 ---
 
-## 🛠️ Como Executar Localmente
+## Como Executar Localmente
 
 ### Pré-requisitos
 - **Node.js** `>= 22.0.0`
@@ -62,7 +62,7 @@ A aplicação estará disponível em `http://localhost:5173`.
 
 ---
 
-## 🐳 Deploy com Docker / Docker Compose (VM)
+## Deploy com Docker / Docker Compose (VM)
 
 O projeto conta com um `Dockerfile` multi-stage e `docker-compose.yml` prontos para rodar em qualquer máquina virtual (VM) ou servidor Linux utilizando **Nginx** com compressão Gzip, cache de assets e suporte a rotas SPA.
 
@@ -84,7 +84,7 @@ docker compose down
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```text
 portfolio-dev/
@@ -118,7 +118,7 @@ portfolio-dev/
 
 ---
 
-## 📬 Contato
+## Contato
 
 - **LinkedIn**: [linkedin.com/in/dionathan-boing](https://www.linkedin.com/in/dionathan-boing/)
 - **GitHub**: [github.com/DionathanDevs](https://github.com/DionathanDevs)
