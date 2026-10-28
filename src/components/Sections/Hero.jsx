@@ -69,7 +69,7 @@ const Hero = () => {
                         <a href="#projects" className="btn btn-primary btn-lg">
                             {t.hero.btnProjects}
                         </a>
-                        <a href="/curriculo.pdf" download className="btn btn-outline btn-lg">
+                        <a href={`${import.meta.env.BASE_URL}curriculo.pdf`} download="curriculo.pdf" className="btn btn-outline btn-lg">
                             <Download size={16} style={{ marginRight: '6px' }} />
                             {t.hero.btnResume}
                         </a>
