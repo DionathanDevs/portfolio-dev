@@ -59,7 +59,20 @@ const ProjectsCarousel = () => {
                             <div className="embla__slide" key={project.id}>
                                 <Link to={`/projects/${project.id}`} className="project-card">
                                     <div className="project-image-container">
-                                        <img src={project.image} alt={project.title} className="project-image" />
+                                        {project.images && project.images.length > 1 ? (
+                                            <div className="project-multi-image">
+                                                {project.images.map((imgSrc, imgIdx) => (
+                                                    <img
+                                                        key={imgIdx}
+                                                        src={imgSrc}
+                                                        alt={`${project.title} ${imgIdx + 1}`}
+                                                        className={`project-image project-image-item-${imgIdx + 1}`}
+                                                    />
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <img src={project.image} alt={project.title} className="project-image" />
+                                        )}
                                     </div>
 
                                     <div className="project-info">

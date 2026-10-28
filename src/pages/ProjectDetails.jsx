@@ -10,7 +10,7 @@ const smoothTransition = { duration: 1.5, ease: [0.22, 1, 0.36, 1] };
 const ProjectDetails = () => {
     const { id } = useParams();
     const [project, setProject] = useState(null);
-    const { t, projectsData, lang } = useLanguage();
+    const { t, projectsData } = useLanguage();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -70,14 +70,33 @@ const ProjectDetails = () => {
                     </motion.div>
                 </div>
 
-                <motion.div
-                    className="details-image-container"
-                    initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ ...smoothTransition, delay: 0.4 }}
-                >
-                    <img src={project.image} alt={project.title} className="details-hero-image" />
-                </motion.div>
+                {project.images && project.images.length > 1 ? (
+                    <motion.div
+                        className="details-gallery-container"
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ ...smoothTransition, delay: 0.4 }}
+                    >
+                        {project.images.map((imgSrc, idx) => (
+                            <div key={idx} className={`details-gallery-item details-gallery-item-${idx + 1}`}>
+                                <img
+                                    src={imgSrc}
+                                    alt={`${project.title} view ${idx + 1}`}
+                                    className="details-gallery-image"
+                                />
+                            </div>
+                        ))}
+                    </motion.div>
+                ) : (
+                    <motion.div
+                        className="details-image-container"
+                        initial={{ y: 30, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ ...smoothTransition, delay: 0.4 }}
+                    >
+                        <img src={project.image} alt={project.title} className="details-hero-image" />
+                    </motion.div>
+                )}
 
                 <div className="details-content-grid">
                     <motion.div
