@@ -1,6 +1,9 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import scriptProjectImg from '../assets/images/script_project.png';
 import tilProjectImg from '../assets/images/til_project.png';
+import kairosViewImg from '../assets/images/kairos_view.jpeg';
+import kairosView2Img from '../assets/images/kairos_view_2.jpeg';
+import kairosView3Img from '../assets/images/kairos_view_3.jpeg';
 
 export const LanguageContext = createContext();
 
@@ -67,6 +70,21 @@ export const getExperienceData = (lang) => [
 ];
 
 export const getProjectsData = (lang) => [
+    {
+        id: "kairos",
+        title: "Kairos App",
+        description: lang === 'pt'
+            ? "PWA mobile-first para acompanhamento de hábitos diários, mapa de consistência anual e gestão de tarefas integrada ao Telegram."
+            : "A mobile-first PWA for daily habit tracking, annual consistency heatmaps, and task management integrated with Telegram.",
+        image: kairosViewImg,
+        images: [kairosViewImg, kairosView2Img, kairosView3Img],
+        tags: ["React", "Node.js", "TypeScript", "SQLite", "Clean Architecture", "PWA"],
+        githubUrl: "https://github.com/DionathanDevs/kairos",
+        demoUrl: "#",
+        longDescription: lang === 'pt'
+            ? "O Kairos (do grego, 'o momento oportuno') nasceu da ideia de unir a construção de disciplina diária e a organização de tarefas pessoais e do trabalho em uma experiência única, rápida e sem fricção, funcionando como um aplicativo nativo (PWA) tanto no celular quanto no desktop. No módulo de Hábitos, o usuário acompanha suas metas diárias com atualização otimista instantânea, alternando entre o modo foco no dia atual ('Hoje') e a matriz semanal completa de 7 dias, além de visualizar sua sequência perfeita (Streak), estatísticas semanais e um histórico de consistência anual estilo GitHub. No módulo de Tarefas, as pendências são organizadas por contexto (Pessoais e Trabalho) e classificadas por prioridade (Alta, Média e Baixa) com ordenação automática e ações em lote. O projeto conta ainda com integração via Bot do Telegram (Polling/Webhook com segurança Zero-Trust) para criar e consultar tarefas por mensagens com tags (#work, !alta), backend estruturado em Clean Architecture com Node.js, Express e SQLite nativo, e suíte de Quality Gates automatizados para desenvolvimento assistido por IA."
+            : "Kairos (from the Greek for 'the opportune moment') was built from the idea of unifying daily habit discipline and personal/work task organization into a single, fast, friction-free experience that feels like a native mobile and desktop app (PWA). In the Habits module, users track daily goals with instant optimistic UI updates, switching between a focused 'Today' view and a full 7-day weekly matrix while monitoring their perfect streak, weekly performance charts, and a GitHub-inspired consistency heatmap. In the Tasks module, action items are organized by context (Personal and Work) and priority tags (High, Medium, Low) with smart sorting and batch actions. The platform also features a Zero-Trust Telegram Bot integration (Polling/Webhook) to create and list tasks directly from chat messages using tags (#work, !high), a Clean Architecture backend powered by Node.js, Express, and native SQLite, and automated AI Quality Gates."
+    },
     {
         id: "scriptvault",
         title: "ScriptVault App",
