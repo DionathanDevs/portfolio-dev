@@ -1,0 +1,118 @@
+.blog-preview-section {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-preview-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.blog-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.blog-preview-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-elevated);
+    transition: border-color var(--trans-speed) ease, background-color var(--trans-speed) ease, transform var(--trans-speed) ease;
+}
+
+.blog-preview-card:hover {
+    border-color: var(--border-hover);
+    background-color: rgba(255, 255, 255, 0.025);
+    transform: translateY(-3px);
+}
+
+.blog-preview-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
+}
+
+.blog-preview-category {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    color: var(--foreground);
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+}
+
+.blog-preview-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--foreground-muted);
+}
+
+.blog-preview-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+}
+
+.blog-preview-excerpt {
+    font-size: 0.92rem;
+    color: var(--foreground-muted);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    flex: 1;
+}
+
+.blog-preview-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.blog-preview-readtime {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--foreground-dim);
+}
+
+.blog-preview-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--foreground);
+}
+
+@media (max-width: 992px) {
+    .blog-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-preview-grid {
+        grid-template-columns: 1fr;
+    }
+}

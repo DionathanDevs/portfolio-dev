@@ -4,29 +4,32 @@ import tilProjectImg from '../assets/images/til_project.png';
 import kairosViewImg from '../assets/images/kairos_view.jpeg';
 import kairosView2Img from '../assets/images/kairos_view_2.jpeg';
 import kairosView3Img from '../assets/images/kairos_view_3.jpeg';
+import { blogTranslations, getBlogPosts } from '../data/blogData';
 
 export const LanguageContext = createContext();
 
 export const translations = {
     pt: {
-        nav: { about: "Sobre", stacks: "Stacks", experience: "Carreira", projects: "Projetos" },
+        nav: { about: "Sobre", stacks: "Stacks", experience: "Carreira", projects: "Projetos", blog: "Blog" },
         hero: { badge: "Desenvolvedor Full Stack", title1: "boing.", title2: "boing.", desc: "Desenvolvedor Full Stack com foco em Node.js, TypeScript, Angular e Java, transformando regras de negócio em soluções ponta a ponta com integrações de ERPs e desenvolvimento assistido por IA.", btnProjects: "Ver Projetos", btnResume: "Currículo" },
         about: { label: "Sobre mim", title: "Desenvolvimento Full Stack moderno e robusto.", p1: "Sou Desenvolvedor Full Stack formado em Análise e Desenvolvimento de Sistemas pela Universidade Positivo (12/2025), com experiência em Node.js, TypeScript, Angular, JavaScript e Java, transformando regras de negócio de vários módulos em soluções funcionais.", p2: "No dia a dia, construo features ponta a ponta, integro sistemas com ERPs (SAP, TOTVS RM, TOTVS Protheus, Pirâmide), implemento filas assíncronas com BullMQ, gerencio dados em MySQL, MongoDB e Redis e utilizo IA como ferramenta central de desenvolvimento (geração, revisão e depuração de código), aliado a Docker, CI/CD e code review.", stat1v: "Full", stat1l: "Stack", stat2v: "ERPs &", stat2l: "Integrações", stat3v: "Dev + IA &", stat3l: "Clean Code", available: "Disponível para projetos", role: "Desenvolvedor Full Stack | Node.js, TypeScript & IA" },
         stacks: { label: "Habilidades", title: "Tecnologias.", desc: "Competências técnicas, ferramentas e integrações que utilizo no dia a dia para entregar soluções completas e testáveis." },
         experience: { label: "Carreira", title: "Experiência.", desc: "Minha trajetória profissional e formação em Análise e Desenvolvimento de Sistemas." },
         projects: { label: "Trabalhos em Destaque", title: "Projetos.", viewCase: "Ver Case" },
         footer: { desc: "Construindo software de alta performance.", rights: "Todos os direitos reservados." },
-        details: { back: "Voltar ao Portfólio", code: "Ver Código", demo: "Ver Demo", about: "Sobre o Projeto", tech: "Tecnologias Usadas", timeline: "Linha do tempo", notFound: "Projeto não encontrado", return: "Voltar ao Início" }
+        details: { back: "Voltar ao Portfólio", code: "Ver Código", demo: "Ver Demo", about: "Sobre o Projeto", tech: "Tecnologias Usadas", timeline: "Linha do tempo", notFound: "Projeto não encontrado", return: "Voltar ao Início" },
+        blog: blogTranslations.pt
     },
     en: {
-        nav: { about: "About", stacks: "Stacks", experience: "Career", projects: "Projects" },
+        nav: { about: "About", stacks: "Stacks", experience: "Career", projects: "Projects", blog: "Blog" },
         hero: { badge: "Full Stack Developer", title1: "boing.", title2: "boing.", desc: "Full Stack Developer focused on Node.js, TypeScript, Angular, and Java, turning complex business rules into end-to-end solutions with ERP integrations and AI-assisted development.", btnProjects: "Explore Work", btnResume: "Resume" },
         about: { label: "About me", title: "Modern and robust Full Stack development.", p1: "I am a Full Stack Developer with a degree in Systems Analysis and Development from Universidade Positivo (12/2025) and experience in Node.js, TypeScript, Angular, JavaScript, and Java, turning multi-module business rules into functional solutions.", p2: "Day to day, I build end-to-end features, integrate systems with major ERPs (SAP, TOTVS RM, TOTVS Protheus, Pirâmide), implement asynchronous queues with BullMQ, work with MySQL, MongoDB, and Redis, and leverage AI as a core development tool (code generation, review, and debugging) alongside Docker, CI/CD, and code reviews.", stat1v: "Full", stat1l: "Stack", stat2v: "ERPs &", stat2l: "Integrations", stat3v: "AI Dev &", stat3l: "Clean Code", available: "Available for work", role: "Full Stack Developer | Node.js, TypeScript & AI" },
         stacks: { label: "Capabilities", title: "Technology Stack.", desc: "Technical skills, tools, and integrations I use daily to deliver complete and testable solutions." },
         experience: { label: "Career", title: "Experience.", desc: "My professional journey and background in Systems Analysis and Development." },
         projects: { label: "Selected Work", title: "Projects.", viewCase: "View Case" },
         footer: { desc: "Building high-performance software.", rights: "All rights reserved." },
-        details: { back: "Back to Portfolio", code: "View Code", demo: "Live Demo", about: "About the Project", tech: "Technologies Used", timeline: "Timeline", notFound: "Project not found", return: "Return Home" }
+        details: { back: "Back to Portfolio", code: "View Code", demo: "Live Demo", about: "About the Project", tech: "Technologies Used", timeline: "Timeline", notFound: "Project not found", return: "Return Home" },
+        blog: blogTranslations.en
     }
 };
 
@@ -136,7 +139,16 @@ export const LanguageProvider = ({ children }) => {
     const t = translations[lang];
 
     return (
-        <LanguageContext.Provider value={{ lang, toggleLanguage, t, experienceData: getExperienceData(lang), projectsData: getProjectsData(lang) }}>
+        <LanguageContext.Provider
+            value={{
+                lang,
+                toggleLanguage,
+                t,
+                experienceData: getExperienceData(lang),
+                projectsData: getProjectsData(lang),
+                blogPosts: getBlogPosts(lang)
+            }}
+        >
             {children}
         </LanguageContext.Provider>
     );
